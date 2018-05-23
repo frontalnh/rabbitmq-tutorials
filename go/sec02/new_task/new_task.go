@@ -40,7 +40,7 @@ func main() {
 		false,  // mandatory
 		false,
 		amqp.Publishing{
-			DeliveryMode: amqp.Persistent,
+			DeliveryMode: amqp.Persistent, //파일에 저장함
 			ContentType:  "text/plain",
 			Body:         []byte(body),
 		})
