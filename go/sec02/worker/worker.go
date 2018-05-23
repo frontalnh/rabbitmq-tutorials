@@ -34,7 +34,7 @@ func main() {
 	failOnError(err, "Failed to declare a queue")
 
 	err = ch.Qos(
-		1,     // prefetch count
+		1,     // prefetch count 하나를 처리하기 전까지는 다음 fetch 가 이루어지지 않도록 설정함
 		0,     // prefetch size
 		false, // global
 	)

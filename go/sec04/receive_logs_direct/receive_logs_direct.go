@@ -24,7 +24,7 @@ func main() {
 
 	err = ch.ExchangeDeclare(
 		"logs_direct", // name
-		"direct",      // type
+		"direct",      // direct 방식으로 받는 exchange를 선언한다.
 		true,          // durable
 		false,         // auto-deleted
 		false,         // internal

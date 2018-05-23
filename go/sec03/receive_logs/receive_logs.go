@@ -33,7 +33,7 @@ func main() {
 	failOnError(err, "Failed to declare an exchange")
 
 	q, err := ch.QueueDeclare(
-		"",    // name
+		"",    // 임의의 이름의 큐를 선언한다.
 		false, // durable
 		false, // delete when unused
 		true,  // exclusive
@@ -45,7 +45,7 @@ func main() {
 	err = ch.QueueBind(
 		q.Name, // queue name
 		"",     // routing key
-		"logs", // exchange
+		"logs", // exchange의 이름이 들어간다.
 		false,
 		nil)
 	failOnError(err, "Failed to bind a queue")
